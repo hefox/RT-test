@@ -1,0 +1,11 @@
+<div>
+    <h3>Galleries</h3>
+    <ul>
+      <!-- this is the new syntax for ng-repeat -->
+      <li *ngFor="let gallery of galleries">
+          <a href="#" [routerLink]="['/galleries', gallery.stub]">
+        {{gallery.date}} - {{gallery.name}}
+        </a>
+      </li>
+    </ul>
+</div>
