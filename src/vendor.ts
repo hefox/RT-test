@@ -8,3 +8,6 @@ import '@angular/http';
 import 'rxjs';
 
 import 'foundation-sites/dist/js/foundation';
+import 'foundation-sites/dist/js/plugins/foundation.interchange';
+import 'foundation-sites/dist/js/plugins/foundation.util.mediaQuery';
+import 'foundation-sites/dist/js/plugins/foundation.util.timerAndImageLoader';

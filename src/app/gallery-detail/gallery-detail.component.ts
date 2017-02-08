@@ -24,7 +24,7 @@ export class GalleryDetailComponent implements OnInit {
       .subscribe((gallery: Gallery) => this.gallery = gallery);
   }
 
-  ngAfterViewInit() {
-    jQuery(this.elementRef.nativeElement).foundation('reflow');
+  ngAfterViewChecked() {
+    jQuery('.gallery-images img', this.elementRef.nativeElement).foundation();
   }
 }
