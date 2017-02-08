@@ -25,11 +25,13 @@ interface GalleryImage {
 
 function toGallery(r:any): Gallery{
   let images = r.images || [];
-  for (let i in images) {
-    images[i] = <GalleryImage>({
-      img: 'http://www.richtrove.com/' + r.stub + '/' + images[i].replace('thumbnails','images'),
-      thumb: 'http://www.richtrove.com/' + r.stub + '/' + images[i],
-    });
+  for (let i in r.images) {
+    if (typeof images[i] === "string") {
+      images.push(<GalleryImage>({
+        img: 'http://www.richtrove.com/' + r.stub + '/' + images[i].replace('thumbnails','images'),
+        thumb: 'http://www.richtrove.com/' + r.stub + '/' + images[i],
+      }));
+    }
   }
   let gallery = <Gallery>({
     date: r.date,

@@ -25,6 +25,10 @@ export class GalleryDetailComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    jQuery('.gallery-images img', this.elementRef.nativeElement).foundation();
+    let galleryele = jQuery('#gallery', this.elementRef.nativeElement);
+    if (jQuery('img', galleryele).length) {
+      galleryele.nanogallery2();
+      console.log('heree');
+    }
   }
 }

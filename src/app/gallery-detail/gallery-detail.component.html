@@ -1,10 +1,8 @@
 <div>
-    <h3>Gallery {{gallery.name}}</h3>
-    <div class="row small-up-2 large-up-3 gallery-images">
-      <div  *ngFor="let image of gallery.images" class="column column-block">
-        <a href="#" href="{{image.img }}" >
-          <img class="thumbnail" [attr.data-interchange]="'[' + image.thumb +', small], [' + image.thumb +', medium], [' + image.img +', large]'" />
-        </a>
-      </div>
-    </div>
+  <h3>Gallery {{gallery.name}}</h3>
+  <div id="gallery" [attr.data-nanogallery2]>
+    <a *ngFor="let image of gallery.images"  href="{{image.img}}" [attr.data-ngThumb]="image.thumb" >
+      <img src="{{image.thumb}}"/>
+    </a>
+  </div>
 </div>

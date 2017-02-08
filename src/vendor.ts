@@ -11,3 +11,5 @@ import 'foundation-sites/dist/js/foundation';
 import 'foundation-sites/dist/js/plugins/foundation.interchange';
 import 'foundation-sites/dist/js/plugins/foundation.util.mediaQuery';
 import 'foundation-sites/dist/js/plugins/foundation.util.timerAndImageLoader';
+import 'nanogallery2/dist/jquery.nanogallery2';
+
